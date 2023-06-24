@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Product 1",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt harum suscipit similique autem laudantium accusantium voluptatem,sequi corrupti cum sint.",
+        "image": "dexium.jpg"
+    },
+    {
+        "name": "Product 2",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt harum suscipit similique autem laudantium accusantium voluptatem,sequi corrupti cum sint.",
+        "image": "draxxin.jpg"
+    },
+    {
+        "name": "Product 3",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt harum suscipit similique autem laudantium accusantium voluptatem,sequi corrupti cum sint.",
+        "image": "excede.jpg"
+    },
+    {
+        "name": "Product 4",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt harum suscipit similique autem laudantium accusantium voluptatem,sequi corrupti cum sint.",
+        "image": "macrosyn.jpg"
+    },
+    {
+        "name": "Product 4",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt harum suscipit similique autem laudantium accusantium voluptatem,sequi corrupti cum sint.",
+        "image": "spectramast.jpg"
+    },
+    {
+        "name": "Product 5",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt harum suscipit similique autem laudantium accusantium voluptatem,sequi corrupti cum sint.",
+        "image": "polymast.jpg"
+    }
+]
