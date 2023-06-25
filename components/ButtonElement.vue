@@ -1,7 +1,7 @@
 <template>
-  <div class="btn px-8 py-4 bg-blue-500">
+  <button class="btn px-8 py-4 bg-blue-500">
       <span>{{ text }}</span>
-  </div>
+  </button>
 </template>
 
 <script>
