@@ -12,7 +12,7 @@
             repellendus! Impedit.
           </p>
         </div>
-        <ButtonElement text="Learn More" class="m-auto text-xl" />
+        <ButtonElementDark text="Learn More" class="m-auto text-xl" />
       </div>
     </section>
 
@@ -90,7 +90,7 @@
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, a
             provident quae ipsam quasi quam.
           </p>
-          <ButtonElement text="READ MORE" />
+          <ButtonElementLight text="READ MORE" />
         </div>
       </div>
     </section>
@@ -241,7 +241,7 @@
               >
                 Send Message
               </button> -->
-              <ButtonElement text="Send Message" type="submit" class="my-8" />
+              <ButtonElementLight text="Send Message" type="submit" class="my-8" />
             </div>
             <!-- @click.prevent="submitForm" -->
             <!-- class="submit-btn yellow-btn" -->
