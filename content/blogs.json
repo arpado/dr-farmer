@@ -2,9 +2,18 @@
     {
         "title": "First Article",
         "file": "first-article.md",
-        "link": "/first-article",
+        "link": "/blog/first-article",
         "image": "animals-about-to-drop-album-photos-58aeb2b30934d__700.jpg",
         "date": "",
+        "readtime": "",
+        "imgPos": "50% 70%"
+    },
+    {
+        "title": "Second Article",
+        "file": "second-article.md",
+        "link": "/blog/second-article",
+        "image": "jakob-cotton-K1hwkV5GPl0-unsplash.jpg",
+        "date": "1687795253311",
         "readtime": "",
         "imgPos": "50% 70%"
     }
