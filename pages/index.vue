@@ -119,7 +119,7 @@
 
     <section class="benefits-section flex justify-center py-16 bg-blue-500">
       <div class="benefits-grid-container w-full max-w-5xl mx-8 grid">
-        <div class="benefits-grid grid grid-cols-1 sm:grid-cols-2">
+        <div class="benefits-grid grid grid-cols-1 sm:grid-cols-2 gap-8 p-8">
           <BenefitElement
             v-for="(benefit, index) in benefits"
             :key="index"
@@ -147,7 +147,13 @@
           v-for="(testimonial, index) in testimonials"
           :key="index"
         >
-          <p>{{ testimonial.body }}</p>
+          <div class="swiper-slide-content space-y-4">
+            <p>"{{ testimonial.body }}"</p>
+            <div class="flex items-center">
+              <ProfilePic :imgsrc="`/images/${testimonial.pic}`" />
+              <span class="italic mx-4"> -- {{ testimonial.name }}</span>
+            </div>
+          </div>
         </swiper-slide>
       </swiper>
     </section>
@@ -158,27 +164,36 @@
     >
       <div class="grid grid-cols-3 gap-4 w-full max-w-5xl mx-8">
         <div class="google-map">
+          <h2 class="text-center my-4 text-xl">Find Us:</h2>
+          <hr class="w-1/2 m-auto my-4" />
+          <!-- <div> -->
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d693.7603741020332!2d19.759090194991362!3d45.930470422507035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1shu!2srs!4v1687283904615!5m2!1shu!2srs"
-            height="450"
-            style="border: 1px solid black; width: 100%"
+            style="border: 1px solid black; width: 100%; height: calc(100% - 5rem); min-height: 450px;"
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
+          <!-- </div> -->
         </div>
         <div class="contacts-container w-full text-center">
-          <h3>Contact Us:</h3>
-          <p>Telephone: 555-555</p>
+          <h2 class="text-center my-4 text-xl">Contact Us:</h2>
+          <hr class="w-1/2 mx-auto my-4" />
+          <div class="space-y-4 text-center">
+            <p>Telephone1:<br/>555-555</p>
+            <p>Telephone2:<br/>555-555</p>
+            <p>Address:<br/>Kelemen 3., Cantavir, 24220, Serbia</p>
+            <p>Email:<br/>mail@dr-farmer.com</p>
+          </div>
         </div>
 
         <div>
-          <h2>Contacts</h2>
-          <hr />
-          <form @submit.prevent="submitForm">
-            <label for="form_name">Your Name:</label>
+          <h2 class="text-center my-4 text-xl">Send a Message:</h2>
+          <hr class="w-1/2 m-auto mt-4" />
+          <form @submit.prevent="submitForm" class="flex flex-col">
+            <label for="form_name" class="mt-4">Your Name:</label>
             <input
-              class="message-input"
+              class="message-input p-1"
               type="text"
               name="form_name"
               id="form_name"
@@ -186,7 +201,7 @@
               v-model="name"
             />
 
-            <label for="form_email">Your Email Address:</label>
+            <label for="form_email" class="mt-4">Your Email Address:</label>
             <input
               class="message-input"
               type="email"
@@ -196,7 +211,7 @@
               v-model="email"
             />
 
-            <label for="form_subject">Subject:</label>
+            <label for="form_subject" class="mt-4">Subject:</label>
             <input
               class="message-input"
               type="text"
@@ -206,7 +221,7 @@
               v-model="subject"
             />
 
-            <label for="form_message">Message:</label>
+            <label for="form_message" class="mt-4">Message:</label>
             <textarea
               class="message-input"
               name="message"
@@ -220,13 +235,13 @@
             <!-- <input type="submit" value="Send Message"> -->
             <!-- <ButtonElement  text="Send Message" type="submit" /> -->
             <div class="flex justify-center">
-              <button
+              <!-- <button
                 type="submit"
                 class="submit-button button-anim"
-                data-augmented-ui="tl-clip tr-clip br-clip bl-clip both"
               >
                 Send Message
-              </button>
+              </button> -->
+              <ButtonElement text="Send Message" type="submit" class="my-8" />
             </div>
             <!-- @click.prevent="submitForm" -->
             <!-- class="submit-btn yellow-btn" -->
@@ -273,18 +288,18 @@ export default {
       testimonials: [
         {
           name: "Aron",
-          pic: "54.jpg",
+          pic: "82.jpg",
           body:
             "Super. Lorem ipsum dolor sit amet consectetur adipisicing elit... Sed, assumenda soluta.",
         },
         {
-          name: "Janos",
-          pic: "72.jpg",
+          name: "Edit",
+          pic: "54.jpg",
           body: "Voluptas praesentium non veritatis.",
         },
         {
-          name: "Edit",
-          pic: "82.jpg",
+          name: "Janos",
+          pic: "72.jpg",
           body:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit.Voluptas praesentium non veritatis.",
         },
@@ -406,7 +421,8 @@ export default {
 }
 .swiper-slide {
   min-height: 250px;
-  background-color: black;
+  max-width: 800px;
+  background-color: royalblue;
   color: white;
   position: relative;
   display: flex;
@@ -420,12 +436,12 @@ export default {
   font-weight: bold;
   line-height: 1;
   z-index: -1;
-  color: rgb(100, 98, 98);
+  /* color: black(100, 98, 98); */
 }
 .swiper-slide::after {
   content: no-close-quote;
 }
-.swiper-slide > p {
+.swiper-slide-content {
   max-width: 500px;
 }
 @media (min-width: 768px) {
