@@ -9,7 +9,7 @@
       </p>
     </div>
     <div
-      class="card-wrapper w-full max-w-5xl mx-auto my-8 flex flex-col gap-8"
+      class="card-wrapper w-full max-w-5xl mx-auto my-8 flex  gap-8"
     >
       <BlogCard
         class="product-card my-4 bg-white"
