@@ -16,25 +16,7 @@
 import { breakpointsTailwind, useBreakpoints } from '@vueuse/core'
 const breakpoints = useBreakpoints(breakpointsTailwind)
 const smallScreen = breakpoints.smallerOrEqual('md')
-
-const links = [
-  {
-    name: "Home",
-    to: "/",
-  },
-  {
-    name: "Products",
-    to: "/products",
-  },
-  {
-    name: "Blog",
-    to: "/blog",
-  },
-  {
-    name: "Contacts",
-    to: "/#contacts",
-  },
-];
+const { links } = defineProps(['links'])
 
 const route = useRoute();
 const isActive = (path) => {
@@ -46,9 +28,6 @@ const isActive = (path) => {
 </script>
 
 <style>
-/* .header-wrapper {
-
-} */
 .nav-link {
   transition: background-color 500ms ease-in-out, color 500ms ease-in-out;
 }
