@@ -1,17 +1,32 @@
 <template>
   <div class="body">
-    <SectionsHeaderElement />
+    <SectionsHeaderElement :links="links"/>
     <!-- <NuxtLayout> -->
-      <NuxtPage />
+    <NuxtPage />
     <!-- </NuxtLayout> -->
-    <SectionsFooterElement />
+    <SectionsFooterElement :links="links"/>
   </div>
 </template>
 
-<script>
-export default {
-
-}
+<script setup>
+const links = [
+  {
+    name: "Home",
+    to: "/",
+  },
+  {
+    name: "Products",
+    to: "/products",
+  },
+  {
+    name: "Blog",
+    to: "/blog",
+  },
+  {
+    name: "Contacts",
+    to: "/#contacts",
+  },
+];
 </script>
 
 <style>
@@ -21,9 +36,9 @@ export default {
   box-sizing: border-box;
 }
 :root {
-/*  color-scheme: light dark;*/
+  /*  color-scheme: light dark;*/
   font-family: Roboto;
-} 
+}
 .body {
   min-height: calc(100dvh);
   /* padding-top: 150px; */
