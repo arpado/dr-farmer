@@ -1,13 +1,26 @@
 <template>
-  <div class="footer-wrapper bg-black text-white">
-      <p>THIS IS THE FOOTER</p>
+  <div class="footer-wrapper flex items-center justify-evenly p-4 bg-black text-white">
+      <div class="sitemap mx-8">
+        <h3 class="text-center">Site Map</h3>
+        <ul class="">
+          <li class="sm:inline m-4 underline" v-for="(link, index) in shortenedLinks" :key="index">
+            <NuxtLink :to="link.to" >
+              {{ link.name }}
+            </NuxtLink>
+          </li>
+        </ul>
+      </div>
+      <div class="madeby mx-8">
+        <p>Made by Arpado.</p>
+        <p>Rights Reserved, 2023.</p>
+      </div>
   </div>
 </template>
 
-<script>
-export default {
-
-}
+<script setup>
+const { links } = defineProps(['links'])
+const shortenedLinks = links.slice(0, 3)
+// const shortenedLinks = computed(() =>  links.slice(0, 3)) 
 </script>
 
 <style>
