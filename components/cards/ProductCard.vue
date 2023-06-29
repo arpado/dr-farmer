@@ -11,8 +11,8 @@
         <p>{{ product.description }}</p>
       </div>
       <div class="flex justify-evenly">
-        <ButtonElementLight text="Learn More" />
-        <ButtonElementDark text="Send Message" />
+        <ElementsButtonLight text="Learn More" />
+        <ElementsButtonDark text="Send Message" />
       </div>
     </div>
   </div>

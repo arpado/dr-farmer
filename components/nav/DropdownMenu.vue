@@ -1,6 +1,6 @@
 <template>
   <div ref="dropdown">
-    <HamburgerElement
+    <NavHamburgerButton
       class="mx-8"
       @toggleMenu="toggleMenu"
       :isActive="isOpen"

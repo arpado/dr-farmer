@@ -11,7 +11,7 @@
     <div
       class="card-wrapper w-full max-w-5xl mx-auto my-8 flex flex-wrap justify-center gap-8"
     >
-      <BlogCard
+      <CardsBlogCard
         class="product-card my-4 bg-white"
         v-for="(article, index) in articles"
         :key="index"

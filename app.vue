@@ -1,10 +1,10 @@
 <template>
   <div class="body">
-    <HeaderElement />
+    <SectionsHeaderElement />
     <!-- <NuxtLayout> -->
       <NuxtPage />
     <!-- </NuxtLayout> -->
-    <FooterElement />
+    <SectionsFooterElement />
   </div>
 </template>
 

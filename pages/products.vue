@@ -11,7 +11,7 @@
     <div
       class="card-wrapper w-full max-w-5xl mx-auto my-8 flex flex-col gap-8"
     >
-      <ProductCard
+      <CardsProductCard
         class="product-card my-4 bg-white"
         v-for="(product, index) in products"
         :key="index"

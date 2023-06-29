@@ -15,7 +15,7 @@
 
       <div class="article-details flex justify-between py-1">
         <div class="author flex items-center">
-          <ProfilePic imgsrc="images/20.jpg" />
+          <ElementsProfilePic imgsrc="images/20.jpg" />
           <span class="mx-2">{{ data.author }}</span>
         </div>
         <span class="flex items-center">{{

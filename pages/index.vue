@@ -14,7 +14,7 @@
             repellendus! Impedit.
           </p>
         </div>
-        <ButtonElementDark text="Learn More" class="m-auto text-xl" />
+        <ElementsButtonDark text="Learn More" class="m-auto text-xl" />
       </div>
     </section>
 
@@ -92,7 +92,7 @@
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, a
             provident quae ipsam quasi quam.
           </p>
-          <ButtonElementLight text="READ MORE" />
+          <ElementsButtonLight text="READ MORE" />
         </div>
       </div>
     </section>
@@ -122,7 +122,7 @@
     <section class="benefits-section flex justify-center py-16 bg-blue-500">
       <div class="benefits-grid-container w-full max-w-5xl mx-8 grid">
         <div class="benefits-grid grid grid-cols-1 sm:grid-cols-2 gap-8 p-8">
-          <BenefitElement
+          <ElementsBenefitBox
             v-for="(benefit, index) in benefits"
             :key="index"
             :content="benefit"
@@ -152,7 +152,7 @@
           <div class="swiper-slide-content space-y-4">
             <p>"{{ testimonial.body }}"</p>
             <div class="flex items-center">
-              <ProfilePic :imgsrc="`/images/${testimonial.pic}`" />
+              <ElementsProfilePic :imgsrc="`/images/${testimonial.pic}`" />
               <span class="italic mx-4"> -- {{ testimonial.name }}</span>
             </div>
           </div>
@@ -251,7 +251,7 @@
               >
                 Send Message
               </button> -->
-              <ButtonElementLight
+              <ElementsButtonLight
                 text="Send Message"
                 type="submit"
                 class="my-8"
