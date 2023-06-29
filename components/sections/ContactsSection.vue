@@ -3,8 +3,10 @@
     class="contacts-section flex justify-center py-16 bg-blue-500"
     id="contacts"
   >
-    <div class="grid grid-cols-3 gap-4 w-full max-w-5xl mx-8">
+    <div class="grid contacts-container gap-4 w-full max-w-5xl mx-8">
+      <!-- grid-rows-3 grid-cols-1 md:grid-cols-2 md:grid-rows-2 -->
       <div class="google-map">
+        <!-- row-start-1 row-end-2 col-span-1 md:row-start-2 md:row-end-3 md:col-start-1 md:col-end-3 -->
         <h2 class="text-center my-4 text-xl">Find Us:</h2>
         <hr class="w-1/2 m-auto my-4" />
         <!-- <div> -->
@@ -22,7 +24,8 @@
         ></iframe>
         <!-- </div> -->
       </div>
-      <div class="contacts-container w-full text-center">
+      <div class="contacts-container">
+        <!-- row-start-2 row-end-3 col-span-1 md:row-start-1 md:row-end-2 md:col-start-1 md:col-end-2 w-full text-center -->
         <h2 class="text-center my-4 text-xl">Contact Us:</h2>
         <hr class="w-1/2 mx-auto my-4" />
         <div
@@ -50,7 +53,8 @@
         </div>
       </div>
 
-      <div>
+      <div class="contact-form max-w-md md:max-w-full mx-auto">
+        <!-- row-start-3 row-end-4 col-span-1 md:row-start-1 md:row-end-2 md:col-start-2 md:col-end-3 -->
         <h2 class="text-center my-4 text-xl">Send a Message:</h2>
         <hr class="w-1/2 m-auto mt-4" />
         <form @submit.prevent="submitForm" class="flex flex-col">
@@ -128,7 +132,7 @@ export default {
       email: "",
       subject: "",
       message: "",
-    }
+    };
   },
   methods: {
     async submitForm() {
@@ -170,6 +174,38 @@ export default {
 </script>
 
 <style scoped>
+.contacts-container {
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 1fr;
+}
+.google-map {
+  grid-row: 1/2;
+  grid-column: 1/2;
+}
+.contacts-container {
+  grid-row: 2/3;
+  grid-column: 1/2;
+}
+.contact-form {
+  grid-row: 3/4;
+  grid-column: 1/2;
+}
 @media (min-width: 768px) {
+  .contacts-container {
+    grid-template-rows: 0.5fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .google-map {
+    grid-row: 1/2;
+    grid-column: 1/3;
+  }
+  .contacts-container {
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+  .contact-form {
+    grid-row: 2/3;
+    grid-column: 2/3;
+  }
 }
 </style>
