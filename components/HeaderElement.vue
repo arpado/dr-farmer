@@ -3,7 +3,7 @@
     class="header-wrapper sticky h-28 w-full -top-8 z-50 flex justify-center items-center bg-black text-white"
   >
     <div class="w-full max-w-7xl flex justify-between items-center">
-      <div class="logo mx-8 text-3xl">DrFarmer</div>
+      <div class="logo mx-8 text-3xl"><Icon id="rod-of-asclepius" name="game-icons:rod-of-asclepius" size="4rem"/>Dr Farmer</div>
       <nav class="navigation-container">
         <NavMenuDropdown v-if="smallScreen" :links="links" :isActive="isActive"/>
         <NavMenuHorizontal v-else :links="links" :isActive="isActive"/>
@@ -56,5 +56,8 @@ const isActive = (path) => {
   background-color: navajowhite;
   color: black;
 }
-
+#rod-of-asclepius {
+  transform-origin: center;
+  transform: rotateZ(27deg);
+}
 </style>

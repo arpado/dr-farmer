@@ -20,9 +20,10 @@ export default {
   padding: 0;
   box-sizing: border-box;
 }
-/* :root {
-  color-scheme: light dark;
-} */
+:root {
+/*  color-scheme: light dark;*/
+  font-family: Roboto;
+} 
 .body {
   min-height: calc(100dvh);
   /* padding-top: 150px; */

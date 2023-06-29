@@ -186,10 +186,13 @@
         <div class="contacts-container w-full text-center">
           <h2 class="text-center my-4 text-xl">Contact Us:</h2>
           <hr class="w-1/2 mx-auto my-4" />
-          <div class="space-y-4 text-center">
+          <div class="space-y-4 text-center flex flex-col justify-evenly items-center text-xl">
+            <div class="w-16 h-16 flex justify-center items-center bg-black rounded-full"><Icon name="ph:phone-call-bold" size="2rem" color="#3B82F6"/></div>
             <p>Telephone1:<br />555-555</p>
             <p>Telephone2:<br />555-555</p>
+            <div class="w-16 h-16 flex justify-center items-center bg-black rounded-full"><Icon name="uil:location-point" size="2rem" color="#3B82F6"/></div>
             <p>Address:<br />Kelemen 3., Cantavir, 24220, Serbia</p>
+            <div class="w-16 h-16 flex justify-center items-center bg-black rounded-full"><Icon name="bi:envelope-at" size="2rem" color="#3B82F6"/></div>
             <p>Email:<br />mail@dr-farmer.com</p>
           </div>
         </div>
@@ -378,6 +381,7 @@ export default {
   background-position-x: 90%;
   background-position-y: center;
   background-attachment: fixed;
+  font-family: Lato;
 }
 .hero-textbox,
 .article-textbox {
