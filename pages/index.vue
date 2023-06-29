@@ -4,11 +4,13 @@
       class="hero flex items-center justify-center md:justify-start md:mx-"
     >
       <div class="hero-textbox my-4 p-6 flex flex-col">
-        <div>
-          <h1 class="my-8 text-4xl">Lorem ipsum dolor sit.</h1>
-          <p class="my-4 text-xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
-            rerum quam eum natus? Ipsa itaque perferendis debitis sunt
+        <div class="text-center">
+          <h1 class="main-title my-8 text-4xl">Lorem ipsum dolor sit.</h1>
+          <p class="selling-point my-4 text-xl">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </p>
+          <p class="selling-point my-4 text-xl">
+            Molestiae rerum quam eum natus? Ipsa itaque perferendis debitis sunt
             repellendus! Impedit.
           </p>
         </div>
@@ -169,7 +171,12 @@
           <!-- <div> -->
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d693.7603741020332!2d19.759090194991362!3d45.930470422507035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1shu!2srs!4v1687283904615!5m2!1shu!2srs"
-            style="border: 1px solid black; width: 100%; height: calc(100% - 5rem); min-height: 450px;"
+            style="
+              border: 1px solid black;
+              width: 100%;
+              height: calc(100% - 5rem);
+              min-height: 450px;
+            "
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
@@ -180,10 +187,10 @@
           <h2 class="text-center my-4 text-xl">Contact Us:</h2>
           <hr class="w-1/2 mx-auto my-4" />
           <div class="space-y-4 text-center">
-            <p>Telephone1:<br/>555-555</p>
-            <p>Telephone2:<br/>555-555</p>
-            <p>Address:<br/>Kelemen 3., Cantavir, 24220, Serbia</p>
-            <p>Email:<br/>mail@dr-farmer.com</p>
+            <p>Telephone1:<br />555-555</p>
+            <p>Telephone2:<br />555-555</p>
+            <p>Address:<br />Kelemen 3., Cantavir, 24220, Serbia</p>
+            <p>Email:<br />mail@dr-farmer.com</p>
           </div>
         </div>
 
@@ -241,7 +248,11 @@
               >
                 Send Message
               </button> -->
-              <ButtonElementLight text="Send Message" type="submit" class="my-8" />
+              <ButtonElementLight
+                text="Send Message"
+                type="submit"
+                class="my-8"
+              />
             </div>
             <!-- @click.prevent="submitForm" -->
             <!-- class="submit-btn yellow-btn" -->
@@ -361,6 +372,7 @@ export default {
 .hero {
   min-height: calc(100dvh - 7rem);
   height: fit-content;
+  background-image: royalblue;
   background-image: url("/images/white-brown-cow-looking-straight-camera-with-herd-cows-pasture-background.jpg");
   background-size: cover;
   background-position-x: 90%;
@@ -379,6 +391,15 @@ export default {
   min-height: 500px;
   background-color: rgba(0, 0, 0, 0.6);
   color: white;
+}
+.main-title {
+  line-height: 34px;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+}
+.selling-point {
+  line-height: 30px;
+  letter-spacing: -1px;
 }
 .features-title {
   flex-shrink: 2;
