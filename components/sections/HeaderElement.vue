@@ -1,21 +1,22 @@
 <template>
-  <div
+  <header
     class="header-wrapper sticky h-28 w-full -top-8 z-50 flex justify-center items-center bg-black text-white"
   >
     <div class="w-full max-w-7xl flex justify-between items-center">
       <div class="logo mx-8 text-3xl"><Icon id="rod-of-asclepius" name="game-icons:rod-of-asclepius" size="4rem"/>Dr Farmer</div>
       <nav class="navigation-container">
-        <NavDropdownMenu v-if="smallScreen" :links="links" :isActive="isActive"/>
-        <NavHorizontalMenu v-else :links="links" :isActive="isActive"/>
+        <NavDropdownMenu class="block md:hidden" :links="links" :isActive="isActive"/>
+        <NavHorizontalMenu class="md:block hidden" :links="links" :isActive="isActive"/>
       </nav>
     </div>
-  </div>
+  </header>
 </template>
 
 <script setup>
-import { breakpointsTailwind, useBreakpoints } from '@vueuse/core'
-const breakpoints = useBreakpoints(breakpointsTailwind)
-const smallScreen = breakpoints.smallerOrEqual('md')
+// import { breakpointsTailwind, useBreakpoints } from '@vueuse/core'
+// const breakpoints = useBreakpoints(breakpointsTailwind)
+// const smallScreen = breakpoints.smallerOrEqual('md')
+
 const { links } = defineProps(['links'])
 
 const route = useRoute();
