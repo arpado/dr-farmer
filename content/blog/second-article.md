@@ -3,6 +3,8 @@ title: Second Article
 description: 'meta description of the page'
 author: Anonymus
 created: 1687795253311
+cover: jakob-cotton-K1hwkV5GPl0-unsplash.jpg
+tags:
 ---
 
 Nulla elit magna, scelerisque quis accumsan eget, maximus scelerisque libero. Ut nec porta elit. Integer id vehicula enim, non scelerisque odio. Maecenas at eros non est vulputate interdum. Vivamus tristique sollicitudin nisi quis faucibus. Pellentesque condimentum neque at ante tempor, ut mollis leo molestie. Phasellus ullamcorper justo sapien, ac pellentesque enim aliquet vel.
