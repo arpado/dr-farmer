@@ -6,10 +6,7 @@
       :isActive="isOpen"
     />
     <transition>
-      <ul
-        class="absolute right-0 top-full bg-black"
-        v-show="isOpen"
-      >
+      <ul class="absolute right-0 top-full bg-black" v-show="isOpen">
         <li class="mx-4 p-3 text-2xl" v-for="link in links" :key="link.to">
           <NuxtLink
             :class="[
@@ -30,13 +27,12 @@
 </template>
 
 <script setup>
-import { onClickOutside } from "@vueuse/core"
-const dropdown = ref(null)
+import { onClickOutside } from "@vueuse/core";
+const dropdown = ref(null);
 
-onClickOutside(dropdown, () => isOpen.value = false)
+onClickOutside(dropdown, () => (isOpen.value = false));
 
 const props = defineProps(["links", "isActive"]);
-
 
 let isOpen = ref(false);
 
@@ -55,6 +51,12 @@ const toggleMenu = () => {
   //     isOpen.value = false
   //   }
 };
+
+onMounted(() => {
+  document.addEventListener("keydown", (e) => {
+    if (e.keyCode == 27 && isOpen.value) isOpen.value = false;
+  });
+});
 </script>
 
 <style scoped>
