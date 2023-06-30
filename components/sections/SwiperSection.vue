@@ -1,38 +1,70 @@
 <template>
   <section class="testimonials-section p-8">
-    <swiper
-      class="swiper-container"
-      :slides-per-view="1"
-      :space-between="50"
-      :autoplay="{ delay: 2000 }"
-    >
-      <swiper-slide
-        class="swiper-slide p-4 isolate flex justify-center items-center"
-        v-for="(testimonial, index) in testimonials"
-        :key="index"
+    <client-only>
+      <swiper-container
+        class="swiper-container"
+        :slides-per-view="1"
+        :space-between="spaceBetween"
+        :centered-slides="true"
+        :pagination="{
+          hideOnClick: true,
+        }"
+        :breakpoints="{
+          768: {
+            slidesPerView: 1,
+          },
+        }"
+        :autoplay="{
+          delay: 5000,
+        }"
+        :loop="true"
       >
-        <div class="swiper-slide-content space-y-4">
-          <p>"{{ testimonial.body }}"</p>
-          <div class="flex items-center">
-            <ElementsProfilePic :imgsrc="`/images/${testimonial.pic}`" />
-            <span class="italic mx-4"> -- {{ testimonial.name }}</span>
+        <!-- @progress="onProgress"
+      @slidechange="onSlideChange" -->
+        <swiper-slide
+          class="swiper-slide px-12 py-24 isolate flex justify-center items-center"
+          v-for="(testimonial, index) in testimonials"
+          :key="index"
+        >
+          <div class="swiper-slide-content space-y-4">
+            <p>"{{ testimonial.body }}"</p>
+            <div class="flex items-center">
+              <ElementsProfilePic :imgsrc="`/images/${testimonial.pic}`" />
+              <span class="italic mx-4"> -- {{ testimonial.name }}</span>
+            </div>
           </div>
-        </div>
-      </swiper-slide>
-    </swiper>
+        </swiper-slide>
+      </swiper-container>
+    </client-only>
   </section>
 </template>
 
 <script>
-import { Swiper, SwiperSlide } from "swiper/vue";
-// Import Swiper styles
-import "swiper/css";
+import { register } from "swiper/element/bundle";
+register();
 
 export default {
-  props: ['testimonials'],
+  props: ["testimonials"],
   components: {
-    Swiper,
-    SwiperSlide,
+    "swiper-container": "swiper-container",
+    "swiper-slide": "swiper-slide",
+  },
+  setup() {
+    const spaceBetween = 10;
+    const onProgress = (e) => {
+      const [swiper, progress] = e.detail;
+      console.log(progress);
+    };
+
+    const onSlideChange = (e) => {
+      console.log("slide changed");
+    };
+
+    return {
+      spaceBetween,
+      onProgress,
+      onSlideChange,
+    };
   },
 };
 </script>
@@ -43,24 +75,30 @@ export default {
 }
 .swiper-slide {
   min-height: 250px;
-  max-width: 800px;
-  background-color: royalblue;
-  color: white;
+  /* background-color: royalblue;
+  color: white; */
+  background-color: white;
+  color: black;
   position: relative;
   display: flex;
 }
-.swiper-slide::before {
+.swiper-slide-content {
+  position: relative;
+}
+.swiper-slide-content::before {
   content: open-quote;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -2.5rem;
+  left: -2.5rem;
   font-size: 10rem;
   font-weight: bold;
   line-height: 1;
   z-index: -1;
+  opacity: 0.7;
+  color: royalblue;
   /* color: black(100, 98, 98); */
 }
-.swiper-slide::after {
+.swiper-slide-content::after {
   content: no-close-quote;
 }
 .swiper-slide-content {
