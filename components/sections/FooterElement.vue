@@ -1,5 +1,6 @@
 <template>
-  <div class="footer-wrapper flex items-center justify-evenly p-4 bg-black text-white">
+  <footer class="footer-wrapper p-4 bg-black text-white">
+    <div class="max-w-7xl flex items-center justify-between m-auto">
       <div class="sitemap mx-8">
         <h3 class="text-center">Site Map</h3>
         <ul class="">
@@ -14,7 +15,8 @@
         <p>Made by Arpado.</p>
         <p>Rights Reserved, 2023.</p>
       </div>
-  </div>
+      </div>
+  </footer>
 </template>
 
 <script setup>
