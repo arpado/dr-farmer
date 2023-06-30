@@ -15,7 +15,7 @@
       </div>
       <img
         class="article-image relative w-full md:w-10/12 top-0 object-scale-down"
-        src="/images/jakob-cotton-K1hwkV5GPl0-unsplash.jpg"
+        src="/images/jakob-cotton-K1hwkV5GPl0-unsplash_1200x800.jpg"
         alt=""
       />
     </div>

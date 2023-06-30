@@ -11,7 +11,7 @@
       </div>
       <img
         class="benefits-img"
-        src="/images/veterinary-farm-walking-cowshed-checking-cows.jpg"
+        src="/images/veterinary-farm-walking-cowshed-checking-cows_1000x667.jpg"
         alt=""
       />
     </div>

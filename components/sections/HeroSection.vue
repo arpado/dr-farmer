@@ -29,7 +29,7 @@ export default {
   min-height: calc(100dvh - 7rem);
   height: fit-content;
   background-image: royalblue;
-  background-image: url("/images/white-brown-cow-looking-straight-camera-with-herd-cows-pasture-background.jpg");
+  background-image: url("/images/white-brown-cow-looking-straight-camera-with-herd-cows-pasture-background_1800x1200.jpg");
   background-size: cover;
   background-position-x: 90%;
   background-position-y: center;
