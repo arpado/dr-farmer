@@ -14,6 +14,7 @@
     "@nuxtjs/fontaine": "^0.4.0",
     "@nuxtjs/google-fonts": "^3.0.1",
     "@nuxtjs/tailwindcss": "^6.7.2",
+    "@tailwindcss/typography": "^0.5.9",
     "@types/node": "^18",
     "nuxt": "^3.5.2",
     "nuxt-icon": "^0.4.1"
