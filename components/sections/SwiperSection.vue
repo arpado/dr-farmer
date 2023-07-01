@@ -29,7 +29,7 @@
           <div class="swiper-slide-content space-y-4">
             <p>"{{ testimonial.body }}"</p>
             <div class="flex items-center">
-              <ElementsProfilePic :imgsrc="`/images/${testimonial.pic}`" />
+              <ElementsProfilePic :imgsrc="`/images/users/${testimonial.pic}`" />
               <span class="italic mx-4"> -- {{ testimonial.name }}</span>
             </div>
           </div>

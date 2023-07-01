@@ -6,7 +6,7 @@
       <ContentDoc v-slot="{ doc }">
         <h1 class="text-center text-2xl font-bold my-8">{{ doc.title }}</h1>
         <div class="flex gap-4 max-w-xl items-center p-4 m-auto">
-          <ElementsProfilePic imgsrc="/images/20.jpg" />
+          <ElementsProfilePic imgsrc="/images/users/20.jpg" />
           <p>{{ doc.author }}</p>
         </div>
         <ContentRenderer :value="doc" class="article-body m-auto space-y-8 prose" />

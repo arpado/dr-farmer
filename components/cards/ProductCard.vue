@@ -3,7 +3,7 @@
     class="product-card max-w-3xl p-4 flex gap-4 border border-black border-solid rounded"
   >
     <div class="image-container">
-      <img :src="`images/${product.image}`" alt="" />
+      <img :src="`images/products/${product.image}`" alt="" />
     </div>
     <div class="flex flex-col justify-evenly">
       <div class="text-container p-4 space-y-4">
