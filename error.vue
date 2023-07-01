@@ -3,7 +3,7 @@
     <div class="error-card flex flex-col md:flex-row">
       <div class="image-container m-auto">
         <!-- col-start-1 col-end-3 row-start-1 row-end-2 -->
-        <img src="images/4200_3_08.jpg" alt="" />
+        <img src="/images/error-cow.jpg" alt="" />
       </div>
       <div class="text-container bg-white rounded m-auto p-8 text-center text-xl">
         <!-- col-start-2 col-end-4 row-start-1 row-end-2 -->
