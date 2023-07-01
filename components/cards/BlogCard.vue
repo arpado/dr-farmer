@@ -3,34 +3,34 @@
     <img
       class="article-img w-full object-cover"
       :style="{ 'object-position': content.imgPos }"
-      :src="`images/${content.image}`"
+      :src="`images/${content.cover}`"
       alt=""
     />
 
     <div class="blog-text m-8 space-y-4">
-      <NuxtLink class="block text-center text-2xl text-blue-500" :to="content.link">
-        <!-- {{ content.title }} -->
-        {{ data.title }}
+      
+      <NuxtLink class="block text-center text-2xl text-blue-500" :to="content._path">
+        {{ content.title }}
       </NuxtLink>
 
       <div class="article-details flex justify-between py-1">
         <div class="author flex items-center">
           <ElementsProfilePic imgsrc="images/20.jpg" />
-          <span class="mx-2">{{ data.author }}</span>
+          <span class="mx-2">{{ content.author }}</span>
         </div>
         <span class="flex items-center">{{
-          new Date(data.created).toLocaleString()
+          new Date(content.created).toLocaleString()
         }}</span>
       </div>
 
       <ContentRendererMarkdown
-        v-if="data"
-        :value="data"
+        v-if="content"
+        :value="content"
         :excerpt="true"
         class="textbox"
       />
-      <NuxtLink class="block underline underline-offset-4 decoration-2 text-blue-500" :to="content.link">
-        <!-- {{ content.title }} -->
+
+      <NuxtLink class="block underline underline-offset-4 decoration-2 text-blue-500" :to="content._path">
         READ MORE
       </NuxtLink>
 

@@ -13,25 +13,19 @@
     >
       <CardsBlogCard
         class="product-card my-4 bg-white"
-        v-for="(article, index) in articles"
-        :key="index"
-        :content="article"
+        v-for="post in posts"
+        :key="post._id"
+        :content="post"
       />
     </div>
     <!-- <div class="test"></div> -->
   </div>
 </template>
 
-<script>
-import articles from "@/content/blogs.json";
-
-export default {
-  data() {
-    return {
-      articles,
-    };
-  },
-};
+<script setup>
+const { data: posts } = await useAsyncData('posts',  () => 
+    queryContent('/blog/').find()
+)
 </script>
 
 <style scoped>
