@@ -21,16 +21,10 @@
   </div>
 </template>
 
-<script>
-import products from "@/content/products.json";
-
-export default {
-  data() {
-    return {
-      products,
-    };
-  },
-};
+<script setup>
+const { data: products } = await useAsyncData('products',  () => 
+    queryContent('/products/').find()
+)
 </script>
 
 <style scoped>
