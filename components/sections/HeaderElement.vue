@@ -7,6 +7,7 @@
       <nav class="navigation-container">
         <NavDropdownMenu class="block md:hidden" :links="links" :isActive="isActive"/>
         <NavHorizontalMenu class="md:block hidden" :links="links" :isActive="isActive"/>
+        <!-- csak egyszeruen ugyanarra az elemre egy mediaquery, ami megvaltoztatja a style-t? -->
       </nav>
     </div>
   </header>
