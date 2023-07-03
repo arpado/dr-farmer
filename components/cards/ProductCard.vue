@@ -3,15 +3,22 @@
     class="product-card max-w-3xl p-4 flex gap-4 border border-black border-solid rounded"
   >
     <div class="image-container">
-      <img :src="`images/products/${product.image}`" alt="" />
+      <img :src="`images/products/${product.cover}`" alt="" />
     </div>
     <div class="flex flex-col justify-evenly">
       <div class="text-container p-4 space-y-4">
-        <h3 class="text-xl font-bold text-center">{{ product.name }}</h3>
-        <p>{{ product.description }}</p>
+        <h3 class="text-xl font-bold text-center">{{ product.title }}</h3>
+        <ContentRendererMarkdown
+          v-if="product"
+          :value="product"
+          :excerpt="true"
+          class="textbox"
+        />
       </div>
       <div class="flex justify-evenly">
+        <NuxtLink :to="product._path">
         <ElementsButtonLight text="Learn More" />
+        </NuxtLink>
         <ElementsButtonDark text="Send Message" />
       </div>
     </div>
