@@ -11,9 +11,13 @@ Nulla elit magna, scelerisque quis accumsan eget, maximus scelerisque libero. Ut
 
 <!--more-->
 
+![Cow looking into the camera](/images/6f9f3ee718d4203b067f07b6addb01dc--to-sell-cow.jpg){class="article-image-right"}
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dictum eget justo vitae consectetur. Phasellus id molestie turpis. Mauris molestie mi at sapien semper tristique. Sed interdum lacus nec felis tincidunt consectetur. Nulla tincidunt porta tortor, nec accumsan lacus posuere vel. Maecenas a vehicula tortor, eget accumsan dui. Suspendisse potenti. Morbi molestie arcu nulla. Nunc ut porttitor mauris. Aenean porttitor elit risus, a laoreet tellus condimentum quis. Sed quis lacus odio. Duis tristique arcu eget laoreet vehicula. Quisque suscipit magna eu malesuada fringilla. Nam ornare sagittis est id iaculis. Sed consectetur nunc ut quam accumsan suscipit. Sed metus est, sollicitudin ac nunc id, consectetur efficitur tortor.
 
 ## Vivamus malesuada enim sit amet molestie efficitur.
+
+![a white-brown cow looking straight into the camera with a herd of cows in a pasture](/images/white-brown-cow-looking-straight-camera-with-herd-cows-pasture-background_1800x1200.jpg){class="article-image-left"}
 
 - Sed eu elit a orci iaculis mattis eu ut erat.
 - Duis consequat massa sodales, blandit mi ut, aliquet augue.
@@ -23,6 +27,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dictum eget justo
 - Integer porta nulla nec purus fermentum accumsan tincidunt ut arcu.
 
 Nam elementum elementum est. Fusce id molestie lacus. Vestibulum placerat hendrerit leo pellentesque faucibus. Praesent et orci sit amet ligula fringilla sollicitudin. Pellentesque ipsum elit, sodales ut bibendum ac, vestibulum a risus. Nunc ultrices egestas dolor, nec semper tellus consequat eu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc laoreet libero sem, id congue velit pretium sit amet. Donec fermentum, risus sed auctor luctus, urna lorem porta mi, quis placerat mauris libero sed risus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas accumsan neque nec sem placerat rhoncus. Pellentesque ornare elit ac mauris maximus volutpat.
+
+![Two vets walking among the cows](/images/veterinary-farm-walking-cowshed-checking-cows_1000x667.jpg){class="article-image-center"}
 
 ## Integer porta nulla nec purus fermentum accumsan tincidunt ut arcu.
 
