@@ -3,7 +3,9 @@
     class="product-card max-w-3xl p-4 flex gap-4 border border-black border-solid rounded"
   >
     <div class="image-container">
-      <img :src="`images/products/${product.cover}`" alt="" />
+      <NuxtLink :to="product._path">
+        <img :src="`images/products/${product.cover}`" :alt="`An image of the medication: ${product.title}`" />
+      </NuxtLink>
     </div>
     <div class="flex flex-col justify-evenly">
       <div class="text-container p-4 space-y-4">
@@ -17,7 +19,7 @@
       </div>
       <div class="flex justify-evenly">
         <NuxtLink :to="product._path">
-        <ElementsButtonLight text="Learn More" />
+          <ElementsButtonLight text="Learn More" />
         </NuxtLink>
         <ElementsButtonDark text="Send Message" />
       </div>
