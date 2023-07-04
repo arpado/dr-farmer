@@ -29,6 +29,11 @@
 //   .findOne()
 // });
 
+// sajat baromsag
+// if (data.deleteExcerpt) {
+
+// }
+console.log(data)
 </script>
 
 <style>
@@ -39,7 +44,22 @@
   box-shadow: 5px 5px 15px 0 black;
 }
 .article-body ul {
-  list-style: disc;
+  /* list-style: disc; */
   list-style-position: inside;
+}
+.article-image-center {
+  margin: auto;
+  width: 100%;
+}
+.article-image-left {
+  width: 60%;
+  max-width: 250px;
+  float: left;
+  margin-right: 2rem;
+}
+.article-image-right {
+  max-width: 250px;
+  float: right;
+  margin-left: 2rem;
 }
 </style>
