@@ -1,11 +1,13 @@
 <template>
   <div class="blog-card border-8 border-solid border-white rounded">
-    <img
-      class="article-img w-full object-cover"
-      :style="{ 'object-position': content.imgPos }"
-      :src="`images/${content.cover}`"
-      alt=""
-    />
+    <NuxtLink :to="content._path">
+      <img
+        class="article-img w-full object-cover"
+        :style="{ 'object-position': content.imgPos }"
+        :src="`images/${content.cover}`"
+        :alt="`Cover image of the article: ${content.title}`"
+      />
+    </NuxtLink>
 
     <div class="blog-text m-8 space-y-4">
       
@@ -18,9 +20,10 @@
           <ElementsProfilePic imgsrc="images/users/20.jpg" />
           <span class="mx-2">{{ content.author }}</span>
         </div>
-        <span class="flex items-center">{{
+        <!-- <span class="flex items-center">{{
           new Date(content.created).toLocaleString()
-        }}</span>
+        }}</span> -->
+        <span>{{getDate}}</span>
       </div>
 
       <ContentRendererMarkdown
@@ -63,6 +66,18 @@ export default {
     getImgPos(props) {
       return props.content.imgPos;
     },
+    getDate(props) {
+      const date = new Date(props.content.created)
+      const options = {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+        hour: "numeric",
+        minute: "numeric",
+        second: "numeric",
+      }
+      return new Intl.DateTimeFormat('en-US', options).format(date)
+    }
   },
 };
 </script>
