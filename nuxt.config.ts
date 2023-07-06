@@ -9,7 +9,8 @@ export default defineNuxtConfig({
     '@nuxt/content',
     // '@nuxtjs/google-fonts',
     '@nuxtjs/fontaine',
-    'nuxt-icon'
+    'nuxt-icon',
+    '@vueuse/motion/nuxt'
   ],
   // buildModules: [
   //   '@nuxtjs/google-fonts'
