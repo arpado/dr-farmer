@@ -10,8 +10,10 @@
     </NuxtLink>
 
     <div class="blog-text m-8 space-y-4">
-      
-      <NuxtLink class="block text-center text-2xl text-blue-500" :to="content._path">
+      <NuxtLink
+        class="block text-center text-2xl text-blue-500"
+        :to="content._path"
+      >
         {{ content.title }}
       </NuxtLink>
 
@@ -23,7 +25,7 @@
         <!-- <span class="flex items-center">{{
           new Date(content.created).toLocaleString()
         }}</span> -->
-        <span>{{getDate}}</span>
+        <span>{{ getDate }}</span>
       </div>
 
       <ContentRendererMarkdown
@@ -33,10 +35,12 @@
         class="textbox"
       />
 
-      <NuxtLink class="block underline underline-offset-4 decoration-2 text-blue-500" :to="content._path">
+      <NuxtLink
+        class="block underline underline-offset-4 decoration-2 text-blue-500"
+        :to="content._path"
+      >
         READ MORE
       </NuxtLink>
-
     </div>
   </div>
 </template>
@@ -67,7 +71,7 @@ export default {
       return props.content.imgPos;
     },
     getDate(props) {
-      const date = new Date(props.content.created)
+      const date = new Date(props.content.created);
       const options = {
         year: "numeric",
         month: "long",
@@ -75,14 +79,14 @@ export default {
         hour: "numeric",
         minute: "numeric",
         second: "numeric",
-      }
-      return new Intl.DateTimeFormat('en-US', options).format(date)
-    }
+      };
+      return new Intl.DateTimeFormat("en-US", options).format(date);
+    },
   },
 };
 </script>
 
-<style>
+<style scoped>
 .blog-card {
   min-height: 300px;
   min-width: 200px;
@@ -94,5 +98,12 @@ export default {
   height: 250px;
 }
 .article-details {
+}
+/* clamping text */
+.textbox {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
 }
 </style>
