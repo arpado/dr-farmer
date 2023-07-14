@@ -4,7 +4,7 @@
   >
     <div class="image-container">
       <NuxtLink :to="product._path">
-        <img :src="`images/products/${product.cover}`" :alt="`An image of the medication: ${product.title}`" />
+        <img :src="`images/products/${product.cover}`" :alt="`An image of the medication: ${product.title}`" class="h-full my-0 mx-auto object-contain max-w-xs"/>
       </NuxtLink>
     </div>
     <div class="flex flex-col justify-evenly">
@@ -42,9 +42,5 @@ export default {
   width: 100%;
   height: 400px;
 }
-.image-container > img {
-  height: 100%;
-  object-fit: contain;
-  margin: 0 auto;
-}
+
 </style>
