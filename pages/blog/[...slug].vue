@@ -33,7 +33,6 @@
 // if (data.deleteExcerpt) {
 
 // }
-console.log(data)
 </script>
 
 <style>
