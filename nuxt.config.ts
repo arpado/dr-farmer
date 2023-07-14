@@ -25,5 +25,8 @@ export default defineNuxtConfig({
         ital: [100]
       },
     }
-  }
+  },
+  router: {
+    middleware: ['scrollTriggerRefresh']
+  },
 })
