@@ -42,6 +42,7 @@ const links = [
 .body {
   min-height: calc(100dvh);
   /* padding-top: 150px; */
+  /* overflow-y: hidden; */
 }
 .nuxtlink {
   /* text-decoration: royalblue underline solid .2rem;
@@ -68,11 +69,11 @@ const links = [
 }
 .page-enter-active,
 .page-leave-active {
-  transition: all 0.4s;
+  transition: filter 0.4s;
 }
 .page-enter-from,
 .page-leave-to {
-  opacity: 0;
+  /* opacity: 0; */
   filter: blur(1rem);
 }
 </style>
