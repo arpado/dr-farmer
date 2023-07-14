@@ -1,12 +1,17 @@
 <template>
   <section class="benefits-section flex justify-center py-16 bg-blue-500">
     <div class="benefits-grid-container w-full max-w-5xl mx-8 grid">
-      <div class="benefits-grid grid grid-cols-1 sm:grid-cols-2 gap-8 p-8">
+      <div
+        class="benefits-grid grid grid-cols-1 sm:grid-cols-2 gap-8 p-8"
+        ref="benefitsContainer"
+      >
         <ElementsBenefitBox
           v-for="(benefit, index) in benefits"
           :key="index"
           :content="benefit"
           :index="index"
+          class="opacity-0"
+          ref="benefitBoxes"
         />
       </div>
       <img
@@ -18,10 +23,28 @@
   </section>
 </template>
 
-<script>
-export default {
-    props: ['benefits']
-};
+<script setup>
+import { animate, inView } from "motion";
+
+const props = defineProps(["benefits"]);
+const benefitsContainer = ref(null);
+const benefitBoxes = ref([]);
+
+onMounted(() => {
+  benefitBoxes.value.forEach((box) => {
+    const stop = inView(
+      box.$el,
+      () => {
+        animate(box.$el, { opacity: 1 }, { duration: 3 });
+      },
+      { amount: 1 }
+    );
+  });
+});
+
+onBeforeUnmount(() => {
+  stop()
+})
 </script>
 
 <style scoped>
