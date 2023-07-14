@@ -2,9 +2,9 @@
   <div class="wrapper">
     <SectionsHeroSection />
     <SectionsFeaturesSection />
-    <SectionsArticleSuggestion1 />
+    <SectionsArticleSuggestion article="first-article" textBoxPos="article-textbox-1" />
     <SectionsAboutSection />
-    <SectionsArticleSuggestion2 />
+    <SectionsArticleSuggestion article="second-article" textBoxPos="article-textbox-2"/>
     <SectionsBenefitsSection :benefits="benefits" />
     <SectionsSwiperSection :testimonials="testimonials" />
     <SectionsContactsSection />
