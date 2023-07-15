@@ -42,7 +42,7 @@ const links = [
 .body {
   min-height: calc(100dvh);
   /* padding-top: 150px; */
-  /* overflow-y: hidden; */
+  overflow-y: hidden;
 }
 .nuxtlink {
   /* text-decoration: royalblue underline solid .2rem;

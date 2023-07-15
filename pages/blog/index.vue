@@ -12,10 +12,11 @@
       class="card-wrapper w-full max-w-7xl mx-auto my-8 flex flex-wrap justify-center gap-8"
     >
       <CardsBlogCard
-        class="product-card my-4 bg-white"
+        class="product-card my-4 bg-white opacity-0"
         v-for="post in posts"
         :key="post._id"
         :content="post"
+        ref="blogCard"
       />
     </div>
     <!-- <div class="test"></div> -->
@@ -23,9 +24,17 @@
 </template>
 
 <script setup>
+import { animate } from "motion"
+const blogCard = ref([])
+
 const { data: posts } = await useAsyncData('posts',  () => 
     queryContent('/blog/').find()
 )
+onMounted(() => {
+  blogCard.value.forEach((card, index) => {
+    animate(card.$el, { opacity: [0, 1], y: [100, 0] }, {duration: 1, delay: 0.5 * index })
+  })
+})
 </script>
 
 <style scoped>
