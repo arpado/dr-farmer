@@ -83,7 +83,7 @@ onMounted( async() => {
   },
   {margin: "0px 0px -25% 0px"})
 });
-onUnmounted(() => {
+onBeforeRouteLeave(() => {
   stop()
 })
 </script>

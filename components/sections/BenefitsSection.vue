@@ -41,8 +41,7 @@ onMounted(() => {
     );
   });
 });
-
-onBeforeUnmount(() => {
+onBeforeRouteLeave(() => {
   stop()
 })
 </script>
