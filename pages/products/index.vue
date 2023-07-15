@@ -31,7 +31,7 @@ const { data: products } = await useAsyncData("products", () =>
 );
 onMounted(() => {
   productCard.value.forEach((card, index) => {
-    inView(
+    const stop = inView(
       card.$el,
       () => {
         if (index % 2) {
@@ -52,6 +52,9 @@ onMounted(() => {
     );
   });
 });
+onBeforeRouteLeave(() => {
+  stop()
+})
 </script>
 
 <style scoped>
